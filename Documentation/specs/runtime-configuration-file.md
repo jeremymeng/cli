@@ -25,6 +25,10 @@ The files are both JSON files stored in UTF-8 encoding. Below are sample files. 
     "runtimeConfig": {
         "gcServer": true,
         "gcConcurrent": false
+    },
+    "targetFramework?": {
+        "name": "NetCoreApp",
+        "version": "1.0.1"
     }
 }
 ```
@@ -103,15 +107,6 @@ The files are both JSON files stored in UTF-8 encoding. Below are sample files. 
             "type": "package",
             "sha512": "[base64 string]"
         }
-    },
-    "runtimes": {
-        ".NETStandardApp,Version=v1.5": {
-            "win7-x64": [ ],
-            "win7-x86": [ ],
-            "win8-x64": [ "win7-x64" ],
-            "win8-x86": [ "win7-x64" ],
-            "etc...": [ "etc..." ]
-        }
     }
 }
 ```
@@ -127,6 +122,9 @@ This section is copied verbatim from an identical section in the input `project.
 * Others _TBD_
 
 These settings are read by `corehost` to determine how to initialize the runtime. All versions of `corehost` **must ignore** settings in this section that they do not understand (thus allowing new settings to be added in later versions).
+
+### `targetFramework` Section (`.config.json`)
+TODO
 
 ### `compilationOptions` Section (`.deps.json`)
 
